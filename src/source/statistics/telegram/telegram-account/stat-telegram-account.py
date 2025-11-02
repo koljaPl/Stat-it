@@ -126,8 +126,7 @@ class TelegramUserFetcher:
                 'error': True,
                 'message': f'Failed to fetch user info for "{identifier}": {str(e)}',
                 'identifier': identifier
-            } finally:
-            # No stop here, let context manager handle
+            }
 
     def _normalize_identifier(self, identifier: str) -> str:
         """Normalize: strip spaces, lowercase, remove extra."""
